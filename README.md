@@ -1,4 +1,4 @@
-🌤️ Weather Check App                                               
+   🌤️ Weather Check App                                               
  
 A simple and elegant web application to check real-time weather conditions of any city around the world using live data from a weather API.
 
