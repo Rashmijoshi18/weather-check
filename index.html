@@ -7,11 +7,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <div class="container">
     <h1>🌤️ Weather Forecast</h1>
     <div class="input-group">
       <input type="text" id="cityInput" placeholder="Enter city name" />
       <button onclick="getWeather()">Get Weather</button>
+
+    <div class="container">
+        <h2>Weather check</h2>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button onclick="getWeather()">Get Weather</button>
+        <div class="weather" id="weather"></div>
+        <div class="error" id="error"></div>
+
     </div>
     <div id="error" class="error"></div>
     <div id="weather"></div>
@@ -19,4 +28,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
