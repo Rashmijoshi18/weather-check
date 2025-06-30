@@ -1,6 +1,6 @@
 async function getWeather() {
   const city = document.getElementById("cityInput").value.trim() || "Delhi";
-  const apiKey = "8079686a360f41ffc2b2eae222ee239f";
+  const apiKey = "d4571532431b050c55818a90096c6fff";
   const weatherDiv = document.getElementById("weather");
   const errorDiv = document.getElementById("error");
 
@@ -16,18 +16,12 @@ async function getWeather() {
 
     const data = await response.json();
 
-    const groupedData = {};
-    data.list.forEach(entry => {
-      const date = entry.dt_txt.split(" ")[0];
-      if (!groupedData[date]) groupedData[date] = [];
-      groupedData[date].push(entry);
-    });
+    // take next 8 entries (3-hour steps, covering 24 hours)
+    const entries = data.list.slice(0, 8);
 
-    const firstDate = Object.keys(groupedData)[0];
-    const entries = groupedData[firstDate];
+    // pick the first one as the "main" summary
     const mainEntry = entries.find(e => e.dt_txt.includes("12:00:00")) || entries[0];
     const weather = mainEntry.weather[0];
-    const iconUrl = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
 
     const hourlyHtml = entries.map(entry => {
       const time = new Date(entry.dt_txt).toLocaleTimeString([], {
@@ -40,16 +34,16 @@ async function getWeather() {
           <strong>${time}</strong>
           <img src="${icon}" alt="${entry.weather[0].description}">
           <div>${entry.weather[0].main}</div>
-          <div>${entry.main.temp}°C</div>
+          <div>${entry.main.temp.toFixed(1)}°C</div>
         </div>
       `;
     }).join("");
 
     weatherDiv.innerHTML = `
       <div class="card">
-        <h3>${new Date(firstDate).toDateString()}</h3>
+        <h3>${new Date(entries[0].dt_txt).toDateString()}</h3>
         <p><strong>${weather.main}</strong> - ${weather.description}</p>
-        <p>🌡️ ${mainEntry.main.temp}°C | 💧 ${mainEntry.main.humidity}% | 🌬️ ${mainEntry.wind.speed} m/s</p>
+        <p>🌡️ ${mainEntry.main.temp.toFixed(1)}°C | 💧 ${mainEntry.main.humidity}% | 🌬️ ${mainEntry.wind.speed} m/s</p>
         <div class="hourly-horizontal">${hourlyHtml}</div>
       </div>
     `;
