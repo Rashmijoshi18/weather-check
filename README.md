@@ -49,4 +49,4 @@
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/weather-check.git
+git clone https://github.com/Rashmijoshi18/weather-check.git
