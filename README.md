@@ -19,7 +19,9 @@
 ## 📁 Project Structure
 
 ├── index.html
+
 ├── style.css
+
 ├── script.js
 
 ---
@@ -36,7 +38,7 @@
 
 - 🔤 HTML5
 - 🎨 CSS3
-- 🔧 Vanilla JavaScript (ES6+)
+- 🔧 JavaScript 
 - ☁️ [WeatherAPI.com](https://www.weatherapi.com/)
 - 🚀 [Vercel](https://vercel.com/) for deployment
 
