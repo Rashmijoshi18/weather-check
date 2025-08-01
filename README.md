@@ -14,15 +14,6 @@
 - 📱 Fully responsive design using pure HTML, CSS, and JavaScript
 - ⚡ Clean and fast — no frameworks or libraries used
 
----
-
-## 📁 Project Structure
-
-├── index.html
-
-├── style.css
-
-├── script.js
 
 ---
 
