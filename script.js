@@ -52,3 +52,6 @@ async function getWeather() {
     errorDiv.innerText = error.message;
   }
 }
+document.getElementById("toggleTheme").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
