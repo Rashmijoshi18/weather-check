@@ -142,7 +142,7 @@
             transform: translateY(-1px);
         }
 
-        .error {
+        /* .error {
             color: #e53e3e;
             margin-bottom: 20px;
             font-weight: 500;
@@ -150,7 +150,16 @@
             padding: 12px 20px;
             border-radius: 12px;
             border: 1px solid rgba(229, 62, 62, 0.2);
-        }
+        } */
+         .error {
+    background: none;   /* remove pink background */
+    border: none;       /* remove pink border */
+    color: #e53e3e;     /* keep only red text */
+    margin-bottom: 20px;
+    font-weight: 500;
+    padding: 0;         /* optional: remove extra spacing */
+}
+
 
         .card {
             background: rgba(255, 255, 255, 0.8);
