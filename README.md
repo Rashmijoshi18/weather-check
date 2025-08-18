@@ -1,36 +1,43 @@
-🌤️ Weather Check App                                               
- 
-A simple and elegant web application to check real-time weather conditions of any city around the world using live data from a weather API.
+# 🌦️ Weather Check
 
-🔍 Overview
+**Weather Check** is a lightweight and responsive weather web app that shows real-time weather data for any city using the WeatherAPI service.
 
-The Weather Check App allows users to:
+🔗 **Live Site**: [https://weather-check-beta.vercel.app](https://weather-check-beta.vercel.app)
 
-Search for a city
+---
 
-View the current temperature, humidity, wind speed, and weather conditions
+## ✨ Features
 
-Get location-specific weather data using the OpenWeatherMap API (or any other API you used)
+- 🔍 Search weather by city name
+- ☀️ Displays temperature, condition, humidity, wind speed, and more
+- 🎯 Real-time data powered by [WeatherAPI.com](https://www.weatherapi.com/)
+- 📱 Fully responsive design using pure HTML, CSS, and JavaScript
+- ⚡ Clean and fast — no frameworks or libraries used
 
-It's a great project to practice working with APIs, user input handling, and responsive design.
 
+---
 
+## ⚙️ How It Works
 
-🛠️ Tech Stack
+1. User enters a **city name**
+2. JavaScript fetches data from **WeatherAPI**
+3. Weather info is displayed dynamically in the browser
 
-HTML
+---
 
-CSS
+## 🛠️ Technologies Used
 
-JavaScript 
+- 🔤 HTML5
+- 🎨 CSS3
+- 🔧 JavaScript 
+- ☁️ [WeatherAPI.com](https://www.weatherapi.com/)
+- 🚀 [Vercel](https://vercel.com/) for deployment
 
-Weather API – OpenWeatherMap
+---
+## 🧪 Local Setup (Optional)
 
-📦 Features
-🌐 Search weather by city name
+> This app runs directly in the browser. But if you want to test locally:
 
-📍 Fetch weather by user's current location (using Geolocation API)
-
-🌡️ Displays temperature, humidity, wind speed, and weather description
-
-📱 Responsive design for mobile and desktop
+1. Clone the repository:
+```bash
+git clone https://github.com/Rashmijoshi18/weather-check.git
